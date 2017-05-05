@@ -14,6 +14,8 @@
 		C3C4BCBA1EBBC22E00862ABA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C4BCB81EBBC22E00862ABA /* LaunchScreen.storyboard */; };
 		C3C4BCDE1EBBC2BB00862ABA /* BrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BCDD1EBBC2BB00862ABA /* BrainTests.swift */; };
 		C3C4BCE01EBBC37500862ABA /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BCDF1EBBC37500862ABA /* Brain.swift */; };
+		C3DA2EF91EBC627B00B7394B /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA2EF81EBC627B00B7394B /* GameTests.swift */; };
+		C3DA2EFB1EBC62AF00B7394B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA2EFA1EBC62AF00B7394B /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C3C4BCD11EBBC22E00862ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C4BCDD1EBBC2BB00862ABA /* BrainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainTests.swift; sourceTree = "<group>"; };
 		C3C4BCDF1EBBC37500862ABA /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		C3DA2EF81EBC627B00B7394B /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		C3DA2EFA1EBC62AF00B7394B /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				C3C4BCAF1EBBC22E00862ABA /* AppDelegate.swift */,
 				C3C4BCB11EBBC22E00862ABA /* ViewController.swift */,
 				C3C4BCDF1EBBC37500862ABA /* Brain.swift */,
+				C3DA2EFA1EBC62AF00B7394B /* Game.swift */,
 				C3C4BCB31EBBC22E00862ABA /* Main.storyboard */,
 				C3C4BCB61EBBC22E00862ABA /* Assets.xcassets */,
 				C3C4BCB81EBBC22E00862ABA /* LaunchScreen.storyboard */,
@@ -113,6 +118,7 @@
 			children = (
 				C3C4BCC61EBBC22E00862ABA /* Info.plist */,
 				C3C4BCDD1EBBC2BB00862ABA /* BrainTests.swift */,
+				C3DA2EF81EBC627B00B7394B /* GameTests.swift */,
 			);
 			path = FizzBuzzTests;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				C3C4BCB21EBBC22E00862ABA /* ViewController.swift in Sources */,
 				C3C4BCE01EBBC37500862ABA /* Brain.swift in Sources */,
 				C3C4BCB01EBBC22E00862ABA /* AppDelegate.swift in Sources */,
+				C3DA2EFB1EBC62AF00B7394B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C4BCDE1EBBC2BB00862ABA /* BrainTests.swift in Sources */,
+				C3DA2EF91EBC627B00B7394B /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
