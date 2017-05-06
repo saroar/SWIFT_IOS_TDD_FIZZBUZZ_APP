@@ -1,26 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaO-yb-QFA">
+                                <rect key="frame" x="262" y="28" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.27450980392156865" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcB-My-Q3N">
+                                <rect key="frame" x="205" y="548" width="99" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.27450980392156865" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G53-F7-iot">
+                                <rect key="frame" x="16" y="100" width="288" height="368"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASZ-CE-LOd">
+                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="177"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="80"/>
+                                        <state key="normal" title="0" backgroundImage="button_border"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-1Z-VWO">
+                                        <rect key="frame" x="145.5" y="0.0" width="138.5" height="177"/>
+                                        <state key="normal" image="champagne" backgroundImage="button_border"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY0-5q-yvA">
+                                        <rect key="frame" x="149.5" y="191" width="138.5" height="177"/>
+                                        <state key="normal" image="space" backgroundImage="button_border"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-31-ZkZ">
+                                        <rect key="frame" x="0.0" y="191" width="138.5" height="177"/>
+                                        <state key="normal" image="lightning" backgroundImage="button_border"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.27450980392156865" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bzk-31-ZkZ" firstAttribute="height" secondItem="ASZ-CE-LOd" secondAttribute="height" id="1H4-u1-sAQ"/>
+                                    <constraint firstItem="ASZ-CE-LOd" firstAttribute="top" secondItem="G53-F7-iot" secondAttribute="top" id="ITS-pO-f60"/>
+                                    <constraint firstItem="PY0-5q-yvA" firstAttribute="width" secondItem="ASZ-CE-LOd" secondAttribute="width" id="K7r-Wr-9OL"/>
+                                    <constraint firstItem="NJM-1Z-VWO" firstAttribute="width" secondItem="ASZ-CE-LOd" secondAttribute="width" id="MHv-91-3P5"/>
+                                    <constraint firstItem="NJM-1Z-VWO" firstAttribute="top" secondItem="G53-F7-iot" secondAttribute="top" id="OSn-jK-lVB"/>
+                                    <constraint firstAttribute="bottom" secondItem="bzk-31-ZkZ" secondAttribute="bottom" id="cia-cA-j0Y"/>
+                                    <constraint firstItem="bzk-31-ZkZ" firstAttribute="leading" secondItem="G53-F7-iot" secondAttribute="leading" id="gFK-bc-lC3"/>
+                                    <constraint firstItem="ASZ-CE-LOd" firstAttribute="width" secondItem="G53-F7-iot" secondAttribute="width" multiplier="0.48" id="j2x-IA-Yaz"/>
+                                    <constraint firstItem="NJM-1Z-VWO" firstAttribute="height" secondItem="ASZ-CE-LOd" secondAttribute="height" id="knu-HE-3I7"/>
+                                    <constraint firstAttribute="bottom" secondItem="PY0-5q-yvA" secondAttribute="bottom" id="kwm-pd-roW"/>
+                                    <constraint firstAttribute="trailing" secondItem="NJM-1Z-VWO" secondAttribute="trailing" constant="4" id="nY1-fj-9r1"/>
+                                    <constraint firstItem="bzk-31-ZkZ" firstAttribute="width" secondItem="ASZ-CE-LOd" secondAttribute="width" id="pEk-ZC-iTb"/>
+                                    <constraint firstItem="PY0-5q-yvA" firstAttribute="height" secondItem="ASZ-CE-LOd" secondAttribute="height" id="q5Z-di-41F"/>
+                                    <constraint firstAttribute="trailing" secondItem="PY0-5q-yvA" secondAttribute="trailing" id="rNp-IB-nhy"/>
+                                    <constraint firstItem="ASZ-CE-LOd" firstAttribute="height" secondItem="G53-F7-iot" secondAttribute="height" multiplier="0.48" id="sbZ-MJ-Zwi"/>
+                                    <constraint firstItem="ASZ-CE-LOd" firstAttribute="leading" secondItem="G53-F7-iot" secondAttribute="leading" id="tcq-8l-xLL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.27450980392156865" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AaO-yb-QFA" secondAttribute="trailing" constant="7" id="GhG-EQ-ppg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BcB-My-Q3N" secondAttribute="trailing" id="QTo-z4-AbI"/>
+                            <constraint firstItem="G53-F7-iot" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAS-I5-0FO"/>
+                            <constraint firstItem="G53-F7-iot" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bKQ-OK-kEg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BcB-My-Q3N" secondAttribute="bottom" constant="20" id="kdh-5P-aeP"/>
+                            <constraint firstItem="AaO-yb-QFA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="lul-Wk-gM9"/>
+                            <constraint firstItem="BcB-My-Q3N" firstAttribute="top" secondItem="G53-F7-iot" secondAttribute="bottom" constant="80" id="m9E-lY-IZg"/>
+                            <constraint firstItem="G53-F7-iot" firstAttribute="trailing" secondItem="BcB-My-Q3N" secondAttribute="trailing" id="tLp-CQ-25x"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-457.5" y="-104.5774647887324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+        <image name="champagne" width="49" height="50"/>
+        <image name="lightning" width="29" height="50"/>
+        <image name="space" width="47" height="50"/>
+    </resources>
 </document>
