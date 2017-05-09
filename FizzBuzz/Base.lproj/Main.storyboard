@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,20 +41,39 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASZ-CE-LOd">
                                         <rect key="frame" x="0.0" y="0.0" width="138.5" height="177"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="80"/>
                                         <state key="normal" title="0" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypn-Yt-ofZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-1Z-VWO">
                                         <rect key="frame" x="145.5" y="0.0" width="138.5" height="177"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzButton">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <state key="normal" image="champagne" backgroundImage="button_border"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY0-5q-yvA">
-                                        <rect key="frame" x="149.5" y="191" width="138.5" height="177"/>
-                                        <state key="normal" image="space" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B43-RB-hHd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-31-ZkZ">
                                         <rect key="frame" x="0.0" y="191" width="138.5" height="177"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVe-rj-S9N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY0-5q-yvA">
+                                        <rect key="frame" x="149.5" y="191" width="138.5" height="177"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzBuzzButton"/>
+                                        <state key="normal" image="space" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITx-bX-mWL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.27450980392156865" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,6 +109,12 @@
                             <constraint firstItem="G53-F7-iot" firstAttribute="trailing" secondItem="BcB-My-Q3N" secondAttribute="trailing" id="tLp-CQ-25x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buzzButton" destination="bzk-31-ZkZ" id="YrO-Ds-OHA"/>
+                        <outlet property="fizzButton" destination="NJM-1Z-VWO" id="bQf-T3-xQU"/>
+                        <outlet property="fizzBuzzButton" destination="PY0-5q-yvA" id="nIe-iw-2CW"/>
+                        <outlet property="numberButton" destination="ASZ-CE-LOd" id="fyD-48-uwo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

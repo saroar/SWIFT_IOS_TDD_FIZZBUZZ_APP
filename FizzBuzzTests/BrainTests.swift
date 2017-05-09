@@ -13,13 +13,12 @@ class BrainTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
     let brain = Brain()
     
     func testDividedByThree() {
@@ -42,23 +41,23 @@ class BrainTests: XCTestCase {
     }
     
     func testSayFizz() {
-        let result = brain.check(number: 3)
-        XCTAssertEqual(result, "fizz")
+        let result = brain.check(move: 3)
+        XCTAssertEqual(result, Move.fizz)
     }
     
     func testSayBuzz() {
-        let result = brain.check(number: 5)
-        XCTAssertEqual(result, "buzz")
+        let result = brain.check(move: 5)
+        XCTAssertEqual(result, Move.buzz)
     }
     
     func testSayFizzBuzz() {
-        let result = brain.check(number: 15)
-        XCTAssertEqual(result, "fizzbuzz")
+        let result = brain.check(move: 15)
+        XCTAssertEqual(result, Move.fizzBuzz)
     }
     
     func testSayNumber() {
-        let result = brain.check(number: 1)
-        XCTAssertEqual(result, "1")
+        let result = brain.check(move: 1)
+        XCTAssertEqual(result, Move.number)
     }
     
 }
